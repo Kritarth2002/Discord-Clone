@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { UserButton } from "@clerk/nextjs/app-beta";
 const state = true;
 export default function Home() {
-  return <div>This is a Protected Route</div>;
+  return (
+    <div>
+      <UserButton afterSignOutUrl="/" />
+    </div>
+  );
 }
